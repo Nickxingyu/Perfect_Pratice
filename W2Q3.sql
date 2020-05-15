@@ -22,11 +22,14 @@ INNER JOIN(
 )s4 USING(emp_no)
 INNER JOIN employees USING(emp_no);
 
+SELECT * FROM dept_gender_salary LIMIT 100;
 
 CREATE TEMPORARY TABLE Summary
 SELECT 'Total' dep, gender, AVG(salary) avg
 FROM dept_gender_salary
 GROUP BY gender;
+
+SELECT * FROM Summary LIMIT 100;
 
 CREATE TEMPORARY TABLE Entire_dept_gender_salary
 SELECT * FROM Summary
@@ -35,6 +38,7 @@ UNION
 FROM dept_gender_salary
 GROUP BY dep, gender);
 
+SELECT * FROM Entire_dept_gender_salary LIMIT 100;
 
 SELECT dep, mt.avg-ft.avg diff
 FROM (
