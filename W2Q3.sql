@@ -53,3 +53,6 @@ INNER JOIN (
          GROUP BY dep, gender
     ) t WHERE gender='F'
 ) ft USING(dep);
+
+SELECT * FROM Entire_dept_gender_salary WHERE gender='M';
+SELECT * FROM Entire_dept_gender_salary WHERE gender='F';
