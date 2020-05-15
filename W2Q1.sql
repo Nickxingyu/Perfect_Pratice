@@ -28,3 +28,4 @@ FROM emp_dept_salary
 GROUP BY dept_no
 ORDER BY salary DESC
 LIMIT 1 ;
+/*END*/
