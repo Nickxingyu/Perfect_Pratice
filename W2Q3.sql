@@ -9,7 +9,7 @@ FROM(
         SELECT emp_no, MAX(from_date) last_date
         FROM salaries GROUP BY emp_no
     ) s1 USING(emp_no)
-    WHERE  from_date = last_date;
+    WHERE  from_date = last_date
 )s2
 INNER JOIN(
     SELECT emp_no, dept_no
@@ -18,8 +18,8 @@ INNER JOIN(
         SELECT emp_no, MAX(from_date) last_date
         FROM dept_emp GROUP BY emp_no
     ) s3 USING(emp_no)
-    WHERE  from_date = last_date;
-)s4
+    WHERE  from_date = last_date
+)s4 USING(emp_no)
 INNER JOIN employees USING(emp_no);
 
 
