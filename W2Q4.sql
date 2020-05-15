@@ -1,3 +1,5 @@
+USE employees
+
 SELECT
     (sss-n*avg_sa*avg_se)/(n*std_sa*std_se) c_ss,
     (sss-n*avg_sa*avg_age)/(n*std_sa*std_age) c_sa,
