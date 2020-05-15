@@ -39,7 +39,7 @@ CREATE TEMPORARY TABLE Count_of_title
 SELECT title, COUNT(*) total FROM Sort_title_and_salary
 GROUP BY title;
 
-SELECT * FROM Count_of_salary LIMIT 100;
+SELECT * FROM Count_of_title LIMIT 100;
 
 SELECT*
 FROM(
