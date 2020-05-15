@@ -22,7 +22,7 @@ INNER JOIN(
 )s4 USING(emp_no)
 ORDER BY title, salary;
 
-SELECT 'P1';
+SELECT * FROM Title_and_salary LIMIT 100;
 
 CREATE TEMPORARY TABLE Sort_title_and_salary
 SELECT title, salary,cnt
@@ -33,13 +33,13 @@ FROM(
 	FROM Title_and_salary
 )s6;
 
-SELECT * FROM Sort_title_and_salary LIMIT 6000;
+SELECT * FROM Sort_title_and_salary LIMIT 100;
 
 CREATE TEMPORARY TABLE Count_of_title
 SELECT title, COUNT(*) total FROM Sort_title_and_salary
 GROUP BY title;
 
-SELECT 'P2';
+SELECT * FROM Count_of_salary LIMIT 100;
 
 SELECT*
 FROM(
